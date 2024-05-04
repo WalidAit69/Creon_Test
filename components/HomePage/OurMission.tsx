@@ -4,6 +4,7 @@ import DropDown from "@/components/Widgets/DropDown";
 import Image from "next/image";
 import React, { useState } from "react";
 import bg from "@/public/images/mission-bg.webp";
+import { motion } from "framer-motion";
 
 const Data = [
   {
@@ -41,7 +42,12 @@ function OurMission() {
 
   return (
     <section className="">
-      <section className="min-h-[100vh] w-[75%] mx-auto text-white flex gap-10 relative pt-20">
+      <motion.section
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 0.3, ease: "easeIn" }}
+        className="min-h-[100vh] w-[75%] mx-auto text-white flex gap-10 relative pt-20"
+      >
         <div className="w-[60%] z-10">
           <h3 className="text-[2.4rem] max-w-[44rem] font-Monument uppercase leading-[110%] z-10">
             OUR VISION IS TO SUPPORT THE INNOVATION OF AI BLOCKCHAIN PROJECTS
@@ -55,14 +61,24 @@ function OurMission() {
         <div className="flex flex-col gap-5 w-[40%] z-10 mt-10">
           {Data &&
             Data.map((content, index) => (
-              <DropDown
+              <motion.div
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{
+                  duration: 0.3,
+                  ease: "easeIn",
+                  delay: index * 0.1,
+                }}
                 key={index}
-                icon={content.icon}
-                title={content.title}
-                content={content.content}
-                isOpen={activeIndex === index}
-                onToggle={() => handleToggle(index)}
-              />
+              >
+                <DropDown
+                  icon={content.icon}
+                  title={content.title}
+                  content={content.content}
+                  isOpen={activeIndex === index}
+                  onToggle={() => handleToggle(index)}
+                />
+              </motion.div>
             ))}
         </div>
 
@@ -72,7 +88,7 @@ function OurMission() {
           loading="lazy"
           className="absolute bottom-0 left-[40%] -translate-x-1/2 w-[55%] z-0"
         />
-      </section>
+      </motion.section>
     </section>
   );
 }

@@ -13,7 +13,7 @@ interface Props {
 
 function DropDown({ icon, title, content, isOpen, onToggle }: Props) {
   const [hover, sethover] = useState(false);
-  const divref = useRef<HTMLDivElement>(null);
+  const divref = useRef<HTMLButtonElement>(null);
 
   useEffect(() => {
     const handleMouseEnter = () => {
@@ -35,10 +35,10 @@ function DropDown({ icon, title, content, isOpen, onToggle }: Props) {
   }, []);
 
   return (
-    <div
+    <button
       ref={divref}
       onClick={onToggle}
-      className="relative w-full pb-5 cursor-pointer border-b-[1px] border-[#13171d] font-Satoshi transition-all"
+      className="relative text-start w-full pb-5 cursor-pointer border-b-[1px] border-[#13171d] font-Satoshi transition-all"
     >
       <div className="flex items-center gap-5">
         <div className="w-28 h-28 relative">
@@ -114,7 +114,7 @@ function DropDown({ icon, title, content, isOpen, onToggle }: Props) {
           {content}
         </motion.p>
       )}
-    </div>
+    </button>
   );
 }
 

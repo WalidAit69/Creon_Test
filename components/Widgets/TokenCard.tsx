@@ -1,5 +1,6 @@
 import Image from "next/image";
 import React from "react";
+import { motion } from "framer-motion";
 
 interface Card {
   title: string;
@@ -10,7 +11,12 @@ interface Card {
 
 function TokenCard({ Card }: { Card: Card }) {
   return (
-    <div className="text-white bg-[#0c0d11] w-[450px] pb-10 pt-7 min-h-[650px] relative">
+    <motion.div
+      initial={{ opacity: 0, y: 100 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.3, ease: "easeIn" }}
+      className="text-white bg-[#0c0d11] w-[450px] pb-10 pt-7 min-h-[650px] relative"
+    >
       <div className="ml-5 flex flex-col gap-3 mb-12 h-[100px]">
         <h4 className="font-Monument text-4xl uppercase">{Card.title}</h4>
         <span className="bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent text-xl font-Satoshi font-[900] max-w-[90%]">
@@ -35,7 +41,7 @@ function TokenCard({ Card }: { Card: Card }) {
           coming soon
         </span>
       </div>
-    </div>
+    </motion.div>
   );
 }
 

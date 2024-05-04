@@ -1,19 +1,35 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 function Profiting() {
   return (
     <section className="py-[5rem] flex flex-col justify-center">
       <div className="w-[75%] mx-auto text-white">
         <div className="flex flex-col font-Monument">
-          <h2 className="text-[4rem] uppercase leading-[110%] font-[700]">
+          <motion.h2
+            initial={{ x: -100, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            transition={{ duration: 0.3, ease: "easeIn" }}
+            className="text-[4rem] uppercase leading-[110%] font-[700]"
+          >
             PROFITING THROUGH
-          </h2>
-          <h3 className="self-end w-fit text-[2.45rem] uppercase font-Monument font-[700] leading-[130%] block bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">
+          </motion.h2>
+          <motion.h3
+            initial={{ x: 100, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            transition={{ duration: 0.3, ease: "easeIn" }}
+            className="self-end w-fit text-[2.45rem] uppercase font-Monument font-[700] leading-[130%] block bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent"
+          >
             AI INNOVATION & DECENTRALIZATION
-          </h3>
+          </motion.h3>
         </div>
 
-        <div className="flex w-full h-[500px] gap-10 mt-20">
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.3, delay: 0.5, ease: "easeIn" }}
+          className="flex w-full h-[500px] gap-10 mt-20"
+        >
           <video muted autoPlay loop className="h-full rounded-lg">
             <source src="/creon-logo.mp4" />
           </video>
@@ -31,7 +47,7 @@ function Profiting() {
               community and for the projects we launch.
             </p>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

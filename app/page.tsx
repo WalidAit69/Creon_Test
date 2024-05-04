@@ -1,9 +1,13 @@
-import ComingSoon from "@/components/ComingSoon";
-import CreonPass from "@/components/CreonPass";
-import FirstScreen from "@/components/FirstScreen";
+"use client";
+
+import Footer from "@/components/Footer";
+import ComingSoon from "@/components/HomePage/ComingSoon";
+import CreonPass from "@/components/HomePage/CreonPass";
+import FirstScreen from "@/components/HomePage/FirstScreen";
+import LastSection from "@/components/HomePage/LastSection";
+import OurMission from "@/components/HomePage/OurMission";
+import Profiting from "@/components/HomePage/Profiting";
 import Navbar from "@/components/Navbar";
-import OurMission from "@/components/OurMission";
-import Profiting from "@/components/Profiting";
 
 export default function Home() {
   return (
@@ -14,8 +18,10 @@ export default function Home() {
         <CreonPass />
         <Profiting />
         <OurMission />
-        <ComingSoon/>
+        <ComingSoon />
+        <LastSection />
       </main>
+      <Footer />
     </>
   );
 }

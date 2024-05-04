@@ -1,5 +1,5 @@
 import React from "react";
-import TokenCard from "./Widgets/TokenCard";
+import TokenCard from "../Widgets/TokenCard";
 
 const Data = [
   {
