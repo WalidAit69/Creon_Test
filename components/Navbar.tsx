@@ -4,11 +4,11 @@ import Image from "next/image";
 
 function Navbar() {
   return (
-    <header className="bg-slate-500 fixed flex items-center justify-between w-[95%] left-1/2 -translate-x-1/2 top-[20px] font-Satoshi">
-      <Image src={logo} alt="logo" width={90} />
+    <header className="absolute flex items-center justify-between w-[95%] left-1/2 -translate-x-1/2 top-[20px] font-Satoshi p-3">
+      <Image src={logo} alt="logo" width={140} />
 
-      <nav className="flex items-center gap-10 text-white">
-        <ul className="flex items-center gap-5 font-[700] text-[.95rem]">
+      <nav className="flex items-center gap-20 text-white">
+        <ul className="flex items-center gap-10 font-[700] text-[1.05rem]">
           <li>
             <a href="#">Creon Pass</a>
           </li>
@@ -31,7 +31,7 @@ function Navbar() {
             </span>
           </li>
         </ul>
-        <button className="border-2 rounded-[.2rem] py-1 px-4 font-[700] text-[.95rem]">
+        <button className="border-2 rounded-[.2rem] py-2 px-8 font-[700] text-[1.05rem]">
           Connect
         </button>
       </nav>
