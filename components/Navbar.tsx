@@ -4,7 +4,7 @@ import Image from "next/image";
 
 function Navbar() {
   return (
-    <header className="absolute flex items-center justify-between w-[95%] left-1/2 -translate-x-1/2 top-[20px] font-Satoshi p-3">
+    <header className="z-[9999] absolute flex items-center justify-between w-[95%] left-1/2 -translate-x-1/2 top-[20px] font-Satoshi p-3">
       <Image src={logo} alt="logo" width={140} />
 
       <nav className="flex items-center gap-20 text-white">
