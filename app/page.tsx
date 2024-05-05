@@ -2,11 +2,15 @@
 import HomePage from "@/pages/HomePage";
 import { useEffect, useState } from "react";
 import Loader from "@/components/Loader";
+import checkAllVideosLoaded from "@/scripts/VideoLoading";
 
 export default function Home() {
   const [MenuOpen, setMenuOpen] = useState(false);
   const [screenWidth, setScreenWidth] = useState(0);
   const [fontsLoaded, setFontsLoaded] = useState(false);
+  const videos: NodeListOf<HTMLVideoElement> =
+    document.querySelectorAll("video");
+  let allVideosLoaded = false;
 
   const handleMenuClick = () => {
     setMenuOpen(!MenuOpen);
@@ -43,13 +47,10 @@ export default function Home() {
   }, [screenWidth, MenuOpen]);
 
   useEffect(() => {
-    if (document && document.fonts) {
-      setTimeout(function () {
-        document.fonts.load('16px "Monument"').then(() => {
-          setFontsLoaded(true);
-        });
-      }, 0);
-    }
+    checkAllVideosLoaded(Array.from(videos), (isLoaded) => {
+      allVideosLoaded = isLoaded;
+      setFontsLoaded(true);
+    });
   }, []);
 
   return fontsLoaded ? (
