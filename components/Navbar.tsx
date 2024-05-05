@@ -15,7 +15,7 @@ function Navbar({ MenuOpen, handleMenuClick }: Props) {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.3, ease: "easeIn" }}
-      className="z-[9999] absolute flex items-center justify-between w-[95%] left-1/2 -translate-x-1/2 top-[20px] font-Satoshi p-3"
+      className="z-[9998] absolute flex items-center justify-between w-[95%] left-1/2 -translate-x-1/2 top-[20px] font-Satoshi p-3"
     >
       <a href="">
         <Image src={logo} alt="logo" width={140} className="sm:w-[140px] w-[100px]" />
