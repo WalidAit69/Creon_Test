@@ -67,6 +67,7 @@ function CreonPass() {
             muted
             loop
             className="w-full h-full object-cover z-[999]"
+            preload="none"
           >
             <source src="/nft-video.mp4" />
           </video>

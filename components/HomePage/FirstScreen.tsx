@@ -5,7 +5,13 @@ function FirstScreen() {
   return (
     <section className="xl:h-[100vh] h-[70vh] max-sm:h-[100vh]">
       <div className="h-full w-full relative">
-        <video autoPlay muted loop className="h-full w-full object-cover">
+        <video
+          autoPlay
+          muted
+          loop
+          className="h-full w-full object-cover"
+          preload="none"
+        >
           <source src="/MainVideo.mp4" />
         </video>
 
@@ -17,7 +23,8 @@ function FirstScreen() {
         >
           <div className="w-[90%] xl:w-[75%] mx-auto flex flex-col gap-5">
             <h1 className="text-white 2xl:text-[4rem] md:text-[2.5rem] text-[5vw] font-Monument font-bold max-w-[75rem] leading-[110%] uppercase">
-              THE WORLD&apos;S FIRST PLATFORM FOR TOKENIZING AI BLOCKCHAIN PROJECTS
+              THE WORLD&apos;S FIRST PLATFORM FOR TOKENIZING AI BLOCKCHAIN
+              PROJECTS
             </h1>
             <div className="relative w-fit">
               <div className="absolute left-0 w-full h-[2px] bg-gradient-to-r from-blue-500 to-purple-600"></div>
