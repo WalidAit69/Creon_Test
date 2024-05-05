@@ -27,8 +27,8 @@ const Data = [
 
 function ComingSoon() {
   return (
-    <section className="py-[5rem]">
-      <div className="w-[75%] mx-auto flex items-center justify-between">
+    <section className="py-[5rem] lg:overflow-hidden overflow-x-scroll scrollbar">
+      <div className="xl:w-[75%] w-[90%] mx-auto flex lg:justify-between gap-5">
         {Data &&
           Data.map((Card, index) => <TokenCard key={index} Card={Card} />)}
       </div>

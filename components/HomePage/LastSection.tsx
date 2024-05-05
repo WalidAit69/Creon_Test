@@ -37,7 +37,7 @@ function LastSection() {
       </div>
 
       {/* Content container */}
-      <div className="w-[75%] mx-auto flex flex-col gap-5 z-[99] relative">
+      <div className="xl:w-[75%] w-[90%] mx-auto flex md:flex-col md:items-center gap-5 z-[99] relative max-md:overflow-x-scroll overflow-hidden scrollbar">
         {Data && Data.map((Card, index) => <CardLg key={index} Card={Card} />)}
       </div>
     </section>

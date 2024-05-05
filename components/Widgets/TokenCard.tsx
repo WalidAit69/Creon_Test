@@ -15,11 +15,11 @@ function TokenCard({ Card }: { Card: Card }) {
       initial={{ opacity: 0, y: 100 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.3, ease: "easeIn" }}
-      className="text-white bg-[#0c0d11] w-[450px] pb-10 pt-7 min-h-[650px] relative"
+      className="text-white bg-[#0c0d11] lg:w-[30vw] max-lg:min-w-[400px] max-sm:min-w-[100%] pb-10 pt-7 xl:min-h-[650px] min-h-[600px] relative"
     >
-      <div className="ml-5 flex flex-col gap-3 mb-12 h-[100px]">
-        <h4 className="font-Monument text-4xl uppercase">{Card.title}</h4>
-        <span className="bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent text-xl font-Satoshi font-[900] max-w-[90%]">
+      <div className="mx-5 flex flex-col gap-0 sm:h-[160px] h-[115px]">
+        <h4 className="font-Monument xl:text-[2.2vw] sm:text-[2rem] text-[1.7rem] uppercase">{Card.title}</h4>
+        <span className="bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent xl:text-[1.2vw] sm:text-[1.35rem] text-[1.2rem] font-Satoshi font-[900] max-w-[90%]">
           {Card.description}
         </span>
       </div>
@@ -34,7 +34,7 @@ function TokenCard({ Card }: { Card: Card }) {
         />
       </div>
 
-      <p className="ml-5 mt-8 max-w-[90%] font-Satoshi">{Card.content}</p>
+      <p className="ml-5 sm:mt-8 mt-7 max-w-[90%] font-Satoshi text-lg">{Card.content}</p>
 
       <div className="absolute right-[5%] -top-[10px] bg-white rounded-full flex items-center justify-center h-5">
         <span className="text-black font-Satoshi text-xs font-bold px-2 uppercase">

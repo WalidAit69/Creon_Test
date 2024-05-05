@@ -14,14 +14,33 @@ interface Props {
 function DropDown({ icon, title, content, isOpen, onToggle }: Props) {
   const [hover, sethover] = useState(false);
   const divref = useRef<HTMLButtonElement>(null);
+  const [screenWidth, setScreenWidth] = useState(0);
+
+  useEffect(() => {
+    const updateScreenWidth = () => {
+      setScreenWidth(window.innerWidth);
+    };
+
+    updateScreenWidth();
+
+    window.addEventListener("resize", updateScreenWidth);
+
+    return () => {
+      window.removeEventListener("resize", updateScreenWidth);
+    };
+  }, []);
 
   useEffect(() => {
     const handleMouseEnter = () => {
-      sethover(true);
+      if (screenWidth > 1024) {
+        sethover(true);
+      }
     };
 
     const handleMouseLeave = () => {
-      sethover(false);
+      if (screenWidth > 1024) {
+        sethover(false);
+      }
     };
 
     divref.current?.addEventListener("mouseenter", handleMouseEnter);
@@ -32,7 +51,7 @@ function DropDown({ icon, title, content, isOpen, onToggle }: Props) {
       divref.current?.removeEventListener("mouseenter", handleMouseEnter);
       divref.current?.removeEventListener("mouseleave", handleMouseLeave);
     };
-  }, []);
+  }, [screenWidth]);
 
   return (
     <button
@@ -41,7 +60,7 @@ function DropDown({ icon, title, content, isOpen, onToggle }: Props) {
       className="relative text-start w-full pb-5 cursor-pointer border-b-[1px] border-[#13171d] font-Satoshi transition-all"
     >
       <div className="flex items-center gap-5">
-        <div className="w-28 h-28 relative">
+        <div className="md:w-28 md:h-28 w-20 h-20 relative">
           <Image
             src={border}
             alt="border"
@@ -49,7 +68,7 @@ function DropDown({ icon, title, content, isOpen, onToggle }: Props) {
           />
 
           <svg
-            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[4.5rem] h-[4.5rem]"
+            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 md:w-[4.5rem] md:h-[4.5rem] w-14 h-14"
             width="68"
             height="76"
             viewBox="0 0 68 76"
@@ -78,7 +97,7 @@ function DropDown({ icon, title, content, isOpen, onToggle }: Props) {
 
         <div className="w-full">
           <h4
-            className={`w-[80%] text-[1.4rem] font-[600] transition-all duration-300 ${
+            className={`w-[80%] md:text-[1.4rem] sm:text-[1.15rem] text-[.95rem] font-[600] transition-all duration-300 ${
               hover && !isOpen && "text-[#4285F4]"
             }`}
           >
@@ -109,7 +128,7 @@ function DropDown({ icon, title, content, isOpen, onToggle }: Props) {
           initial={{ opacity: 0, height: 0 }}
           whileInView={{ opacity: 1, height: "fit-content" }}
           transition={{ duration: 0.3, ease: "easeIn" }}
-          className="ml-16 mt-5"
+          className="ml-16 mt-5 sm:text-base text-sm"
         >
           {content}
         </motion.p>

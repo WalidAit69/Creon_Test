@@ -46,10 +46,10 @@ function OurMission() {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.3, ease: "easeIn" }}
-        className="min-h-[100vh] w-[75%] mx-auto text-white flex gap-10 relative pt-20"
+        className="min-h-[910px] xl:w-[75%] w-[90%] mx-auto text-white flex flex-col md:flex-row lg:gap-10 gap-2 relative pt-20"
       >
-        <div className="w-[60%] z-10">
-          <h3 className="text-[2.4rem] max-w-[44rem] font-Monument uppercase leading-[110%] z-10">
+        <div className="lg:w-[60%] md:w-[45%] w-full z-10">
+          <h3 className="xl:text-[2.4rem] sm:text-[3vw] text-[4vw] max-w-[44rem] font-Monument uppercase leading-[110%] z-10 mt-10">
             OUR VISION IS TO SUPPORT THE INNOVATION OF AI BLOCKCHAIN PROJECTS
             <span className="bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">
               {" "}
@@ -58,7 +58,7 @@ function OurMission() {
           </h3>
         </div>
 
-        <div className="flex flex-col gap-5 w-[40%] z-10 mt-10">
+        <div className="flex flex-col gap-5 lg:w-[40%] md:w-[55%] sm:w-[70%] w-[99%] z-10 mt-10">
           {Data &&
             Data.map((content, index) => (
               <motion.div
@@ -86,7 +86,7 @@ function OurMission() {
           src={bg}
           alt="Creon logo"
           loading="lazy"
-          className="absolute bottom-0 left-[40%] -translate-x-1/2 w-[55%] z-0"
+          className="absolute xl:bottom-0 md:bottom-[200px] lg:left-[40%] md:left-[20%] md:-translate-x-1/2 sm:-right-[150px] bottom-0 -right-[100px] xl:w-[40vw] lg:w-[45vw] sm:w-[70%] w-[90%] z-0"
         />
       </motion.section>
     </section>

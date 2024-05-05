@@ -21,10 +21,18 @@
   box-sizing: border-box;
 }
 
-.h2-hover:hover{
+body {
+  overflow-x: hidden;
+}
+
+.scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.h2-hover:hover {
   color: #4285F4;
 }
 
-.h2-hover:hover span{
+.h2-hover:hover span {
   color: #fff;
 }
