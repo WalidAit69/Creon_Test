@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import VideoLazyLoad from "@/scripts/Video_Load";
 
 export const metadata: Metadata = {
   title: "Creon",

@@ -35,6 +35,7 @@ function Profiting() {
             autoPlay
             loop
             className="md:w-[49vw] w-full rounded-lg object-cover"
+            preload="none"
           >
             <source src="/creon-logo.mp4" />
           </video>

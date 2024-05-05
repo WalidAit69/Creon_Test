@@ -31,7 +31,13 @@ function LastSection() {
 
       {/* Video container */}
       <div className="absolute top-0 z-20 w-full h-full">
-        <video autoPlay loop muted className="w-full h-full object-cover">
+        <video
+          autoPlay
+          loop
+          muted
+          className="w-full h-full object-cover"
+          preload="none"
+        >
           <source src="/roadmap-video.mp4" type="video/mp4" />
         </video>
       </div>
