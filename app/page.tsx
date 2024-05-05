@@ -7,7 +7,12 @@ export default function Home() {
   const [MenuOpen, setMenuOpen] = useState(false);
   const [screenWidth, setScreenWidth] = useState(0);
   const [fontsLoaded, setFontsLoaded] = useState(false);
-  
+  const [videoLoaded, setVideoLoaded] = useState(false);
+
+  const handleVideoLoaded = () => {
+    setVideoLoaded(true);
+  };
+
   const handleMenuClick = () => {
     setMenuOpen(!MenuOpen);
   };
@@ -52,13 +57,15 @@ export default function Home() {
     }
   }, []);
 
-  return fontsLoaded ? (
-    <HomePage
-      MenuOpen={MenuOpen}
-      handleMenuClick={handleMenuClick}
-      handleCloseClick={handleCloseClick}
-    />
-  ) : (
-    <Loader />
+  return (
+    <>
+      {videoLoaded && <Loader />}
+      <HomePage
+        MenuOpen={MenuOpen}
+        handleMenuClick={handleMenuClick}
+        handleCloseClick={handleCloseClick}
+        handleVideoLoaded={handleVideoLoaded}
+      />
+    </>
   );
 }

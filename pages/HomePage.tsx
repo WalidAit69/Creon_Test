@@ -14,9 +14,15 @@ interface Props {
   MenuOpen: boolean;
   handleMenuClick: () => void;
   handleCloseClick: () => void;
+  handleVideoLoaded: () => void;
 }
 
-function HomePage({ MenuOpen, handleMenuClick, handleCloseClick }: Props) {
+function HomePage({
+  MenuOpen,
+  handleMenuClick,
+  handleCloseClick,
+  handleVideoLoaded,
+}: Props) {
   return (
     <>
       <Navbar MenuOpen={MenuOpen} handleMenuClick={handleMenuClick} />
@@ -30,7 +36,7 @@ function HomePage({ MenuOpen, handleMenuClick, handleCloseClick }: Props) {
       >
         <FirstScreen />
         <CreonPass />
-        <Profiting />
+        <Profiting handleVideoLoaded={handleVideoLoaded}/>
         <OurMission />
         <ComingSoon />
         <LastSection />

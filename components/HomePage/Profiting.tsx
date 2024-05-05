@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-function Profiting() {
+function Profiting({ handleVideoLoaded }: { handleVideoLoaded: () => void }) {
   return (
     <section className="py-[5rem] flex flex-col justify-center">
       <div className="xl:w-[75%] w-[90%] mx-auto text-white">
@@ -35,7 +35,7 @@ function Profiting() {
             autoPlay
             loop
             className="md:w-[49vw] w-full rounded-lg object-cover"
-            preload="none"
+            onLoadedData={handleVideoLoaded}
           >
             <source src="/creon-logo.mp4" />
           </video>
