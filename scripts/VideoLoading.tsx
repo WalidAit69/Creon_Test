@@ -13,10 +13,6 @@ function checkAllVideosLoaded(
       }
     });
   });
-
-  if (videos.length === 0) {
-    callback(true);
-  }
 }
 
 export default checkAllVideosLoaded;

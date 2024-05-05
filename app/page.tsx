@@ -48,8 +48,9 @@ export default function Home() {
 
   useEffect(() => {
     checkAllVideosLoaded(Array.from(videos), (isLoaded) => {
-      allVideosLoaded = isLoaded;
-      setFontsLoaded(true);
+      if(isLoaded){
+        setFontsLoaded(true);
+      }
     });
   }, []);
 
