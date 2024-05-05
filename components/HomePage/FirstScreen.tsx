@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 function FirstScreen() {
   return (
-    <section className="xl:h-[100vh] h-[70vh] max-sm:h-[100vh] bg-slate-50">
+    <section className="xl:h-[100vh] h-[70vh] max-sm:h-[100vh]">
       <div className="h-full w-full relative">
         <video autoPlay muted loop className="h-full w-full object-cover">
           <source src="/MainVideo.mp4" />

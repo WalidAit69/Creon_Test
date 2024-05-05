@@ -25,14 +25,7 @@ body {
   overflow-x: hidden;
 }
 
-.scrollbar::-webkit-scrollbar {
-  display: none;
-}
-
-.h2-hover:hover {
-  color: #4285F4;
-}
-
-.h2-hover:hover span {
-  color: #fff;
+.font {
+  font-family: 'Monument';
+  color: transparent;
 }

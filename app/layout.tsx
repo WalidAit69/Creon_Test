@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import VideoLazyLoad from "@/scripts/Video_Load";
+import "@/components/styles.css";
 
 export const metadata: Metadata = {
   title: "Creon",
@@ -14,7 +14,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body className="bg-black">{children}</body>
     </html>
   );
 }
