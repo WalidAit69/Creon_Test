@@ -58,9 +58,11 @@ export default function Home() {
   }, []);
 
   useEffect(() => {
-    !videoLoaded
-      ? (document.body.style.overflow = "hidden")
-      : (document.body.style.overflow = "auto");
+    if (!videoLoaded) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
   }, [videoLoaded]);
 
   return (
