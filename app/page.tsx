@@ -59,7 +59,7 @@ export default function Home() {
 
   return (
     <>
-      {videoLoaded && <Loader />}
+      {!videoLoaded && <Loader />}
       <HomePage
         MenuOpen={MenuOpen}
         handleMenuClick={handleMenuClick}
