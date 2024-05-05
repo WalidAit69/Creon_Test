@@ -47,23 +47,15 @@ export default function Home() {
     }
   }, [screenWidth, MenuOpen]);
 
-  useEffect(() => {
-    if (document && document.fonts) {
-      setTimeout(function () {
-        document.fonts.load('16px "Monument"').then(() => {
-          setFontsLoaded(true);
-        });
-      }, 0);
-    }
-  }, []);
-
-  useEffect(() => {
-    if (!videoLoaded) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "auto";
-    }
-  }, [videoLoaded]);
+  // useEffect(() => {
+  //   if (document && document.fonts) {
+  //     setTimeout(function () {
+  //       document.fonts.load('16px "Monument"').then(() => {
+  //         setFontsLoaded(true);
+  //       });
+  //     }, 0);
+  //   }
+  // }, []);
 
   return (
     <>
