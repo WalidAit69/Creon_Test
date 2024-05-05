@@ -31,7 +31,6 @@ function TokenCard({ Card }: { Card: Card }) {
           width={200}
           height={200}
           className="w-full object-cover hover:scale-[1.15] transition-all duration-300"
-          loading="lazy"
         />
       </div>
 

@@ -36,7 +36,6 @@ function LastSection() {
           loop
           muted
           className="w-full h-full object-cover"
-          preload="none"
         >
           <source src="/roadmap-video.mp4" type="video/mp4" />
         </video>

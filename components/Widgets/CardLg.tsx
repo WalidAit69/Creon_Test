@@ -32,7 +32,6 @@ function CardLg({ Card }: { Card: Card }) {
           height={200}
           alt="card"
           className="w-full h-full object-cover"
-          loading="lazy"
         />
 
         <div className="absolute inset-0 bg-gradient-to-b from-blue-600 to-purple-600 mix-blend-overlay"></div>

@@ -85,7 +85,6 @@ function OurMission() {
         <Image
           src={bg}
           alt="Creon logo"
-          loading="lazy"
           className="absolute xl:bottom-0 md:bottom-[200px] lg:left-[40%] md:left-[20%] md:-translate-x-1/2 sm:-right-[150px] bottom-0 -right-[100px] xl:w-[40vw] lg:w-[45vw] sm:w-[70%] w-[90%] z-0"
         />
       </motion.section>
