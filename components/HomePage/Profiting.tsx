@@ -1,41 +1,24 @@
 import React from "react";
-import { motion } from "framer-motion";
 
-function Profiting({ handleVideoLoaded }: { handleVideoLoaded: () => void }) {
+function Profiting() {
   return (
     <section className="py-[5rem] flex flex-col justify-center">
       <div className="xl:w-[75%] w-[90%] mx-auto text-white">
         <div className="flex flex-col font-Monument">
-          <motion.h2
-            initial={{ x: -100, opacity: 0 }}
-            whileInView={{ x: 0, opacity: 1 }}
-            transition={{ duration: 0.3, ease: "easeIn" }}
-            className="2xl:text-[4rem] md:text-[3rem] sm:text-[5vw] text-[6.5vw] uppercase leading-[110%] font-[700]"
-          >
+          <h2 className="2xl:text-[4rem] md:text-[3rem] sm:text-[5vw] text-[6.5vw] uppercase leading-[110%] font-[700]">
             PROFITING THROUGH
-          </motion.h2>
-          <motion.h3
-            initial={{ x: 100, opacity: 0 }}
-            whileInView={{ x: 0, opacity: 1 }}
-            transition={{ duration: 0.3, ease: "easeIn" }}
-            className="self-end text-end w-fit 2xl:text-[2.45rem] md:text-[2] sm:text-[3vw] text-[4vw] uppercase font-Monument font-[700] leading-[130%] block bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent"
-          >
+          </h2>
+          <h3 className="self-end text-end w-fit 2xl:text-[2.45rem] md:text-[2] sm:text-[3vw] text-[4vw] uppercase font-Monument font-[700] leading-[130%] block bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">
             AI INNOVATION & DECENTRALIZATION
-          </motion.h3>
+          </h3>
         </div>
 
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.3, delay: 0.5, ease: "easeIn" }}
-          className="flex flex-col md:flex-row w-full max-md:h-auto max-lg:h-[400px] max-xl:h-[480px] h-full md:gap-10 gap-5 md:mt-20 mt-5"
-        >
+        <div className="flex flex-col md:flex-row w-full max-md:h-auto max-lg:h-[400px] max-xl:h-[480px] h-full md:gap-10 gap-5 md:mt-20 mt-5">
           <video
             muted
             autoPlay
             loop
             className="md:w-[49vw] w-full rounded-lg object-cover"
-            onLoadedData={handleVideoLoaded}
           >
             <source src="/creon-logo.mp4" />
           </video>
@@ -53,7 +36,7 @@ function Profiting({ handleVideoLoaded }: { handleVideoLoaded: () => void }) {
               community and for the projects we launch.
             </p>
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import "@/components/styles.css";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: "Creon",
@@ -14,7 +16,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="bg-black">{children}</body>
+      <body className="bg-black">
+        <Navbar />
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }

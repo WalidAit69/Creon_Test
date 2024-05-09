@@ -1,6 +1,5 @@
 import Image from "next/image";
 import React from "react";
-import { motion } from "framer-motion";
 
 interface Card {
   title: string;
@@ -10,12 +9,7 @@ interface Card {
 
 function CardLg({ Card }: { Card: Card }) {
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 100 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.3, ease: "easeIn" }}
-      className="flex flex-col-reverse md:flex-row bg-[#0c0d11] bg-opacity-70 text-white relative max-md:min-w-[400px] max-sm:min-w-[100%]"
-    >
+    <div className="flex flex-col-reverse md:flex-row bg-[#0c0d11] bg-opacity-70 text-white relative max-md:min-w-[400px] max-sm:min-w-[100%]">
       <div className="md:w-[70%] max-md:h-1/2 md:py-10 pmd:x-10 py-5 px-5 flex flex-col gap-2">
         <h3 className="font-Monument xl:text-[2vw] md:text-[2.2vw] sm:text-[1.1rem] text-[1rem]">
           {Card.title}
@@ -36,7 +30,7 @@ function CardLg({ Card }: { Card: Card }) {
 
         <div className="absolute inset-0 bg-gradient-to-b from-blue-600 to-purple-600 mix-blend-overlay"></div>
       </div>
-    </motion.div>
+    </div>
   );
 }
 

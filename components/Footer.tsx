@@ -1,16 +1,10 @@
 import Image from "next/image";
 import React from "react";
-import { motion } from "framer-motion";
 
 function Footer() {
   return (
     <footer className="bg-black">
-      <motion.div
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ duration: 0.3, ease: "easeIn" }}
-        className="text-white xl:w-[75%] w-[90%] mx-auto flex md:flex-row flex-col gap-4 md:gap-0 items-center justify-between font-Satoshi py-10"
-      >
+      <div className="text-white xl:w-[75%] w-[90%] mx-auto flex md:flex-row flex-col gap-4 md:gap-0 items-center justify-between font-Satoshi py-10">
         <div className="flex items-center md:flex-row flex-col-reverse gap-8 md:gap-0 justify-between lg:w-[500px] md:w-[400px] text-center">
           <span className="opacity-90 lg:text-base text-sm max-md:text-[1.1rem]">
             © Creon 2023. All rights reserved.
@@ -66,7 +60,7 @@ function Footer() {
           </span>{" "}
           niftables
         </a>
-      </motion.div>
+      </div>
     </footer>
   );
 }

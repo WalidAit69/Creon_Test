@@ -4,7 +4,6 @@ import DropDown from "@/components/Widgets/DropDown";
 import Image from "next/image";
 import React, { useState } from "react";
 import bg from "@/public/images/mission-bg.webp";
-import { motion } from "framer-motion";
 
 const Data = [
   {
@@ -41,11 +40,8 @@ function OurMission() {
   };
 
   return (
-    <section className="">
-      <motion.section
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ duration: 0.3, ease: "easeIn" }}
+    <section>
+      <div
         className="min-h-[910px] xl:w-[75%] w-[90%] mx-auto text-white flex flex-col md:flex-row lg:gap-10 gap-2 relative pt-20"
       >
         <div className="lg:w-[60%] md:w-[45%] w-full z-10">
@@ -61,14 +57,7 @@ function OurMission() {
         <div className="flex flex-col gap-5 lg:w-[40%] md:w-[55%] sm:w-[70%] w-[99%] z-10 mt-10">
           {Data &&
             Data.map((content, index) => (
-              <motion.div
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                transition={{
-                  duration: 0.3,
-                  ease: "easeIn",
-                  delay: index * 0.1,
-                }}
+              <div
                 key={index}
               >
                 <DropDown
@@ -78,7 +67,7 @@ function OurMission() {
                   isOpen={activeIndex === index}
                   onToggle={() => handleToggle(index)}
                 />
-              </motion.div>
+              </div>
             ))}
         </div>
 
@@ -87,7 +76,7 @@ function OurMission() {
           alt="Creon logo"
           className="absolute xl:bottom-0 md:bottom-[200px] lg:left-[40%] md:left-[20%] md:-translate-x-1/2 sm:-right-[150px] bottom-0 -right-[100px] xl:w-[40vw] lg:w-[45vw] sm:w-[70%] w-[90%] z-0"
         />
-      </motion.section>
+      </div>
     </section>
   );
 }

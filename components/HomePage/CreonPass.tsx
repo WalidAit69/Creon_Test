@@ -1,16 +1,11 @@
 import React from "react";
-import { motion } from "framer-motion";
+import CreonBtn from "../Widgets/CreonBtn";
 
 function CreonPass() {
   return (
     <section className="py-[5rem]">
       <div className="w-[90%] xl:w-[75%] mx-auto flex items-center flex-col md:flex-row">
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.3, ease: "easeIn" }}
-          className="md:w-1/2 w-full"
-        >
+        <div className="md:w-1/2 w-full">
           <div className="flex flex-col gap-6">
             <h2 className="text-white 2xl:text-[4rem] lg:text-[3rem] md:text-[2rem] text-[5vw] font-[400] max-w-2xl font-Monument leading-[100%] uppercase">
               CREON PASS NFT
@@ -38,29 +33,10 @@ function CreonPass() {
             </li>
           </ul>
 
-          <button
-            className="text-[.85rem] sm:text-[1rem] md:text-[1.1rem] text-white relative md:w-[450px] w-full bg-gradient-to-r from-blue-500 to-purple-500 mt-16 rounded-[.2rem] h-12 font-Satoshi font-[700]
-           hover:from-blue-500 hover:to-blue-500 transition-all duration-300 overflow-hidden active:scale-95"
-          >
-            <motion.div
-              initial={{ top: 0 }}
-              whileHover={{ top: "-70%" }}
-              transition={{ duration: 0.2, ease: "easeIn" }}
-              className="absolute left-1/2 top-[0%] -translate-x-1/2 h-[80px] flex flex-col
-            justify-between w-full"
-            >
-              <span className="md:mt-[10px] mt-[12px]">Buy Creon Pass</span>
-              <span className="mb-[10px]">Buy Creon Pass</span>
-            </motion.div>
-          </button>
-        </motion.div>
+          <CreonBtn />
+        </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.3, ease: "easeIn", delay: 0.2 }}
-          className="xl:w-1/2 md:w-[600px] mt-10 md:mt-0 w-full h-full xl:h-[90%] relative"
-        >
+        <div className="xl:w-1/2 md:w-[600px] mt-10 md:mt-0 w-full h-full xl:h-[90%] relative">
           <div className="absolute -top-5 left-0 w-full h-20 bg-gradient-to-b from-black via-black"></div>
           <video
             autoPlay
@@ -71,7 +47,7 @@ function CreonPass() {
             <source src="/nft-video.mp4" />
           </video>
           <div className="absolute -bottom-5 left-0 w-full h-20 bg-gradient-to-t from-black via-black"></div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );
