@@ -1,5 +1,3 @@
-'use client'
-
 import Image from "next/image";
 import React from "react";
 
@@ -17,7 +15,7 @@ function TokenCard({ Card }: { Card: Card }) {
         <h4 className="font-Monument xl:text-[2.2vw] sm:text-[2rem] text-[1.7rem] uppercase">
           {Card.title}
         </h4>
-        <span className="bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent xl:text-[1.2vw] sm:text-[1.35rem] text-[1.2rem] font-Satoshi font-[900] max-w-[90%]">
+        <span className="bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent xl:text-[1.2vw] sm:text-[1.35rem] text-[1.2rem] font-Satoshi font-[900] max-w-[95%]">
           {Card.description}
         </span>
       </div>
