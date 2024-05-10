@@ -45,7 +45,7 @@ function OurMission() {
         className="min-h-[910px] xl:w-[75%] w-[90%] mx-auto text-white flex flex-col md:flex-row lg:gap-10 gap-2 relative pt-20"
       >
         <div className="lg:w-[60%] md:w-[45%] w-full z-10">
-          <h3 className="2xl:text-[2.3rem] sm:text-[3vw] text-[4vw] max-w-[44rem] font-Monument uppercase leading-[110%] z-10 mt-10">
+          <h3 className="xl:text-[2.6rem] 2xl:text-[2.5vw] sm:text-[3vw] text-[4.5vw] font-Monument uppercase leading-[110%] z-10 mt-10">
             OUR VISION IS TO SUPPORT THE INNOVATION OF AI BLOCKCHAIN PROJECTS
             <span className="bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">
               {" "}

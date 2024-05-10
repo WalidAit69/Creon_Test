@@ -16,7 +16,7 @@ function FirstScreen() {
 
         <div className="absolute left-0 bottom-[5%] w-full z-10">
           <div className="w-[90%] xl:w-[75%] mx-auto flex flex-col gap-5">
-            <h1 className="text-white 2xl:text-[3.6rem] md:text-[2.5rem] text-[5vw] font-Monument font-bold max-w-[75rem] leading-[110%] uppercase">
+            <h1 className="text-white xl:text-[3.6vw] md:text-[4.8vw] text-[5.5vw] font-Monument font-bold leading-[110%] uppercase">
               THE WORLD&apos;S FIRST PLATFORM FOR TOKENIZING AI BLOCKCHAIN
               PROJECTS
             </h1>

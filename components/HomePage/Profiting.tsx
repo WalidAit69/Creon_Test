@@ -5,10 +5,10 @@ function Profiting() {
     <section className="py-[5rem] flex flex-col justify-center">
       <div className="xl:w-[75%] w-[90%] mx-auto text-white">
         <div className="flex flex-col font-Monument">
-          <h2 className="2xl:text-[3rem] md:text-[3rem] sm:text-[5vw] text-[6.5vw] uppercase leading-[110%] font-[700]">
+          <h2 className="xl:text-[3.45vw] md:text-[4vw] sm:text-[5vw] text-[6.5vw] uppercase leading-[110%] font-[700]">
             PROFITING THROUGH
           </h2>
-          <h3 className="self-end text-end w-fit 2xl:text-[2rem] md:text-[2] sm:text-[3vw] text-[4vw] uppercase font-Monument font-[700] leading-[130%] block bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">
+          <h3 className="self-end text-end w-fit xl:text-[2vw] md:text-[2.5vw] sm:text-[3vw] text-[4vw] uppercase font-Monument font-[700] leading-[130%] block bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">
             AI INNOVATION & DECENTRALIZATION
           </h3>
         </div>
